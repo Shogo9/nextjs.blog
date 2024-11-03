@@ -32,7 +32,7 @@ function BlogCardComponent({ post, lang }: BlogCardProps) {
         <div className="relative aspect-video overflow-hidden">
           <Image
             src={post.imageUrl}
-            alt={post.title[lang as keyof typeof post.title]}
+            alt={post.title[lang as keyof typeof post.title] || "デフォルトのテキスト"}
             fill
             className="object-cover transition-transform duration-300 group-hover:scale-105"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -43,7 +43,6 @@ function BlogCardComponent({ post, lang }: BlogCardProps) {
       <CardHeader className="flex-none">
         <div className="flex flex-wrap gap-2 mb-2">
           <Badge variant="secondary" className="w-fit">
-            <Icon className="h-4 w-4 mr-2" />
             {category?.label[lang as keyof typeof category.label]}
           </Badge>
         </div>

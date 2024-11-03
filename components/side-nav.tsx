@@ -40,7 +40,6 @@ export function SideNav({ lang, className, ...props }: SideNavProps) {
                     asChild
                   >
                     <Link href={categoryPath}>
-                      <Icon className="mr-2 h-4 w-4" />
                       {category.label[lang as keyof typeof category.label]}
                     </Link>
                   </Button>

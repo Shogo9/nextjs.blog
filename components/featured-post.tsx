@@ -33,7 +33,7 @@ export function FeaturedPost({ post, lang }: FeaturedPostProps) {
           <div className="relative aspect-[16/10] lg:aspect-square overflow-hidden">
             <Image
               src={post.imageUrl}
-              alt={post.title[lang as keyof typeof post.title]}
+              alt={post.title[lang as keyof typeof post.title] ?? "デフォルトのテキスト"}
               fill
               className="object-cover transition-transform duration-300 group-hover:scale-105"
               priority
@@ -43,7 +43,6 @@ export function FeaturedPost({ post, lang }: FeaturedPostProps) {
         <CardContent className="p-6 flex flex-col justify-center">
           <div className="flex flex-wrap gap-2 mb-4">
             <Badge variant="secondary" className="w-fit">
-              <Icon className="h-4 w-4 mr-2" />
               {category?.label[lang as keyof typeof category.label]}
             </Badge>
             {post.tags.map((tag) => (
