@@ -4,10 +4,15 @@ import { notFound } from 'next/navigation';
 
 export function generateStaticParams() {
   const tags = new Set(posts.flatMap(post => post.tags));
-  return Array.from(tags).map(tag => ({
-    tag,
-    lang: ['en', 'ja']
-  })).flat();
+  const languages = ['en', 'ja']; // サポートする言語
+
+  // 各タグと各言語の組み合わせを生成
+  return Array.from(tags).flatMap(tag => 
+    languages.map(lang => ({
+      tag,
+      lang
+    }))
+  );
 }
 
 export default function TagPage({
