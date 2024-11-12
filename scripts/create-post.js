@@ -28,7 +28,7 @@ async function createPost() {
   const excerptEn = await prompt('Enter excerpt (English): ');
   const excerptJa = await prompt('Enter excerpt (Japanese): ');
   const imageUrl = await prompt('Enter image URL: ');
-  const category = await prompt('Enter category (news/exploration/astronomy/technology): ');
+  const category = await prompt('Enter category (exploration/astronomy/technology): ');
   const tags = (await prompt('Enter tags (comma-separated): ')).split(',').map(tag => tag.trim());
   const authorName = await prompt('Enter author name: ');
   const authorAvatar = await prompt('Enter author avatar URL: ');

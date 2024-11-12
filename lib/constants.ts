@@ -1,8 +1,8 @@
 export const SITE_CONFIG = {
-  name: 'Space Explorer',
+  name: 'Nebula Cube',
   description: 'Discover the latest news and insights about space exploration',
   links: {
-    youtube: 'https://youtube.com/@SpaceExplorer',
+    youtube: 'https://www.youtube.com/@NebulaCubeネブラキューブ-r1e',
   },
 } as const;
 
@@ -27,7 +27,7 @@ export const CATEGORIES = [
 export const TEAM_MEMBERS = [
   {
     name: 'Shogo Miyawaki',
-    role: { en: 'space alien', ja: '宇宙人' },
+    role: { en: "I'm trying to be an alien", ja: '宇宙人目指してます' },
     avatar: 'https://i.ibb.co/DQ5W5jr/shogo.jpg',
     badges: ['computer science', 'space engineering', 'rocket science']
   },

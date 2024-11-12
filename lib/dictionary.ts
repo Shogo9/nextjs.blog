@@ -1,14 +1,14 @@
 const dictionaries = {
   en: {
     home: {
-      title: "Explore the Cosmos",
-      description: "Your gateway to the latest discoveries in space exploration, astronomy, and the mysteries of our universe.",
+      title: "Explore the Nebula",
+      description: "Gateway to the latest discoveries in space exploration, astronomy, artificial intelligence, science, and the mysteries of the universe.",
     },
   },
   ja: {
     home: {
-      title: "宇宙を探検しよう",
-      description: "宇宙探査、天文学、そして私たちの宇宙の神秘に関する最新の発見をお届けします。",
+      title: "星雲を探検しよう",
+      description: "宇宙探査、天文学、人工知能、科学、そして私たちの宇宙の神秘に関する最新の発見をお届けします。",
     },
   },
 } as const;
